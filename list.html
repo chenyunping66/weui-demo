@@ -12,16 +12,17 @@
   <div class="list-body">
     <div class="file">
       <!-- <div style="padding-left:20px"> -->
-      <div class="title"><span class="mg">文件上传</span></div>
+      <div class="title">
+        <img src="./images/none (1).svg" /><span class="mg">文件上传</span></div>
       <div class="cont">
-        <p>请按必备工具中的说明拍摄，并上传两张不同角度的照片，请在明亮的光线下拍摄</p>
+        <p>请按必备工具中的说明拍摄，并上传两张不同角度的照片，请在<strong>明亮的光线</strong>下拍摄</p>
         <span class="photo">图像1：</span><input type="file"><br>
         <span class="photo">图像2：</span><input type="file">
       </div>
     </div>
 
     <div class="file inpt">
-      <div class="title"><span class="mg">表单</span></div>
+      <div class="title"><img src="./images/none.svg" /><span class="mg">表单</span></div>
       <div class="cont">
         <!-- 输入框 -->
         <!-- 警告样式的输入框 -->
@@ -42,7 +43,7 @@
           <div class="weui-cell">
             <div class="weui-cell__hd div-inline"><label for="" class="weui-label">时间</label></div>
             <div class="weui-cell__bd div-inline">
-              <input class="weui-input" type="datetime-local" value="" placeholder="" />
+              <input class="weui-input" type="date" value="" placeholder="" />
             </div>
           </div>
 
@@ -84,7 +85,7 @@
     width: 90%;
     height: 260px;
     margin: 0 auto;
-    border: 1px solid green;
+    border: 1px solid rgb(202, 202, 202);
   }
 
   .inpt {
@@ -95,21 +96,27 @@
     width: 100%;
     height: 40px;
     /* border: 1px solid red; */
-    line-height: 40px;
+    line-height: 50px;
     /* margin-left: 20px; */
-    background: goldenrod;
+    color: rgb(36, 90, 11);
+    line-height: 43px;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    background: rgb(149, 206, 162);
+  }
+
+  .title img {
+    vertical-align: middle;
+    margin-left: 10px;
   }
 
   .file p {
-    font-size: 0.1rem;
+    font-size: 0.7rem;
   }
 
   .photo {
-    font-size: 0.8rem
-  }
-
-  .mg {
-    margin-left: 20px
+    font-size: 0.8rem;
+    margin-top: 20px;
   }
 
   .cont {
@@ -122,5 +129,7 @@
 
   .weui-cell {
     margin-top: 10px;
+    font-size: 15px;
+    color: #827878;
   }
 </style>

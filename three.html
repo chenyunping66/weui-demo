@@ -1,0 +1,95 @@
+<!--
+ * @Author: your name
+ * @Date: 2019-12-07 15:28:03
+ * @LastEditTime: 2019-12-07 15:36:16
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \vue-meituansd:\myCode\example\example\three.html
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://res.wx.qq.com/open/libs/weui/2.0.1/weui.min.css">
+  <link rel="stylesheet" href="./weuix.css">
+  <script type="text/javascript" src="https://res.wx.qq.com/open/libs/weuijs/1.2.1/weui.min.js"></script>
+</head>
+
+<body>
+  <div id="thirdDiv">
+    <div class="page-hd">
+      <h1 class="page-hd-title">
+        快递信息
+      </h1>
+      <p class="page-hd-desc"></p>
+    </div>
+
+    <div class="page-bd">
+      <div class="weui-cells__title weui-start" id="question_11_name"> 1 . 姓名</div>
+      <div class="weui-form">
+        <div class="weui-form-li">
+          <input type="text" id="question_11" placeholder="请输入姓名" class="weui-form-input">
+        </div>
+      </div>
+
+      <div class="weui-cells__title weui-start" id="question_12_name"> 2 . 手机号</div>
+      <div class="weui-form">
+        <div class="weui-form-li">
+          <input type="number" id="question_12" pattern="[0-9]*" placeholder="请输入手机号" class="weui-form-input">
+        </div>
+      </div>
+      <div class="weui-cells__title weui-start" id="question_13_name"> 3 . 邮寄地址</div>
+      <div class="weui-form">
+        <div class="weui-form-li">
+          <div class="weui-cell">
+            <div class="weui-cell__hd">
+              <label class="weui-label">选取地区</label>
+            </div>
+            <div class="weui-cell__bd">
+              <input class="weui-input" id="question_13_1" placeholder="请选择地址">
+            </div>
+          </div>
+          <div class="weui-cell">
+            <div class="weui-cell__hd">
+              <label class="weui-label">详细地址</label>
+            </div>
+            <div class="weui-cell__bd">
+              <textarea class="weui-form-area" id="question_13_2" rows="2" cols="5" placeholder="请输入详细地址"></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="weui-cells__title weui-start" id="question_14_name"> 4 . 获取方式</div>
+      <div class="weui-form" id="k1">
+        <div class="weui-form-li">
+          <input class="weui-form-checkbox" name="question_14" id="question_14_1" value="自提" type="radio">
+          <label for="question_14_1"><i class="weui-icon-radio"></i>
+            <div class="weui-form-text">
+              <p>自提</p>
+            </div>
+          </label>
+        </div>
+        <div class="weui-form-li">
+          <input class="weui-form-checkbox" name="question_14" id="question_14_2" value="快递" type="radio">
+          <label for="question_14_2">
+            <i class="weui-icon-radio"></i>
+            <div class="weui-form-text">
+              <p>快递</p>
+            </div>
+          </label>
+        </div>
+      </div>
+
+      <div class="weui-footer weui-footer_fixed-bottom">
+        <div class="weui-btn-area">
+          <a class="weui-btn weui-btn_primary" href="javascript:" style="color: white" id="toPayBtn">下一步</a>
+        </div>
+      </div>
+    </div>
+</body>
+
+</html>

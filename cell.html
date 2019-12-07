@@ -1,7 +1,7 @@
 <!-- 
  * @Author: your name
  * @Date: 2019-12-07 10:04:35
- * @LastEditTime: 2019-12-07 14:35:00
+ * @LastEditTime: 2019-12-07 15:39:32
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-meituansd:\myCode\example\example\cell.html -->
@@ -32,20 +32,28 @@
     <h6>一、基本信息</h6>
     <div class="weui-cells weui-cells_form">
 
-      <div class="weui-cell">
+      <div class="weui-cells__title weui-start" id="question_1_name"> 1 . 出生年月</div>
+      <div class="weui-form">
+        <div class="weui-form-li">
+          <input type="text" id="question_1" placeholder="请输入出生年月" class="weui-form-input">
+        </div>
+      </div>
+
+
+      <!-- <div class="weui-cell">
         <div class="weui-cell__hd "><label for="" class="weui-label  weui-start" style="color: rgba(0,0,0,.5);
             font-size: 14px;">1.出生日期</label></div>
         <div class="weui-cell__bd">
           <input class="weui-input" type="date" value="" />
         </div>
-      </div>
-      <div class="weui-cell">
+      </div> -->
+      <!-- <div class="weui-cell">
         <div class="weui-cell__hd "><label for="" class="weui-label" style="color: rgba(0,0,0,.5);
           font-size: 14px;">年龄</label></div>
         <div class="weui-cell__bd">
           <input class="weui-input" type="number" value="岁" placeholder="岁" />
         </div>
-      </div>
+      </div> -->
 
       <template v-for="(data,index) in list">
         <div v-for="tl in data">
@@ -65,14 +73,14 @@
       </template>
 
 
-      <div style="text-align: center;margin-top: 20px;width: 100%;height: 80px;">
-        填表日期：<input type="text " placeholder="年/月/日">
-        <!-- 年<span></span>月<span></span>日 -->
-      </div>
+      <!-- <div style="text-align: center;margin-top: 20px;width: 100%;height: 80px;">
+        填表日期：<input type="text " placeholder="年/月/日"> -->
+      <!-- 年<span></span>月<span></span>日 -->
+      <!-- </div> -->
 
-      <div>
+      <div class="two">
         <h6>（二）HIV尿液自检后调查 </h6>
-        <div class="description">
+        <div class=" description">
           您好！我们正在了解HIV（艾滋病病毒）尿液自检包的使用情况。请您放心，本次调查匿名，我们对您的回答采取保密原则，也希望您的回答是代表您本人的真实情况。调查会占用您小于5分钟。非常感谢您的支持与配合！
         </div>
         <h6>一、自检后的情况</h6>
@@ -115,10 +123,10 @@
             </template>
           </div>
 
-          <div style="float: right;margin-top: 20px;">
+          <!-- <div style="text-align: center;margin-top: 20px;">
             填表日期：<input type="text " placeholder="年/月/日">
-            <!-- 年<span></span>月<span></span>日 -->
-          </div>
+             年<span></span>月<span></span>日 -->
+          <!-- </div> -->
 
         </div>
 
@@ -302,7 +310,7 @@
   }
 
   .description {
-    font-size: 0.1rem;
+    font-size: 0.4rem;
     margin-top: 10px;
     height: 70px;
     float: left !important;
@@ -318,5 +326,12 @@
   .weui-form-text {
     height: 25px;
     line-height: 25px;
+  }
+
+  .two {
+    width: 100%;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgb(179, 175, 175);
   }
 </style>

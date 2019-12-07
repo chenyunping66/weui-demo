@@ -1,0 +1,194 @@
+<!--
+ * @Author: your name
+ * @Date: 2019-12-07 15:18:51
+ * @LastEditTime: 2019-12-07 15:57:08
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \vue-meituansd:\myCode\example\example\test.html
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://res.wx.qq.com/open/libs/weui/2.0.1/weui.min.css">
+  <link rel="stylesheet" href="./weuix.css">
+  <script type="text/javascript" src="https://res.wx.qq.com/open/libs/weuijs/1.2.1/weui.min.js"></script>
+  <script type="text/javascript" src="./vue.js"></script>
+
+</head>
+
+<body>
+  <div class="main">
+    <div class="two" id="box">
+      <div class=" description">
+        基本信息
+      </div>
+      <div class=" description" style="margin-top:20px;margin-left: 20px">一、自检后的情况</div>
+      <div class="weui-cells weui-cells_form">
+
+        <template v-for="(data,index) in Two">
+          <div v-for="tl in data">
+            <div class="weui-cells__title weui-start">{{tl.title}}</div>
+            <div class="weui-form">
+              <div class="weui-form-li iblock" v-for="na in tl.name">
+                <input class="weui-form-checkbox" name="f2" id="g6" value=" " type="radio">
+                <label for="g1">
+                  <i class="weui-icon-radio"></i>
+                  <div class="weui-form-text">
+                    <p>{{na}}</p>
+                  </div>
+                </label>
+              </div>
+            </div>
+          </div>
+        </template>
+        <hr>
+        <div class=" description" style="margin-top: 20px;">二、其他情况</div>
+        <div class="weui-cells weui-cells_form">
+
+          <template v-for="(data,index) in anthor">
+            <div v-for="tl in data">
+              <div class="weui-cells__title weui-start">{{tl.title}}</div>
+              <div class="weui-form">
+                <div class="weui-form-li iblock" v-for="na in tl.name">
+                  <input class="weui-form-checkbox" name="f2" id="g6" value=" " type="radio">
+                  <label for="g1">
+                    <i class="weui-icon-radio"></i>
+                    <div class="weui-form-text">
+                      <p>{{na}}</p>
+                    </div>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </template>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="weui-btn-area">
+      <a class="weui-btn weui-btn_primary" href="./list.html" id="showTooltips">上传</a>
+    </div>
+  </div>
+</body>
+
+</html>
+<script>
+  new Vue({
+    el: '#box',
+    data: {
+      // myData: 'hello Vue',
+      Two: [
+        [{
+            title: "1.您在哪里使用本次HIV尿液自检包？",
+            name: ['家里', '其他地方'],
+
+          },
+          {
+            title: "2.您觉得使用HIV尿液自检包不方便的地方是什么？ [多选题] ",
+            name: ['押金价格贵', '检测前、后需要寻求咨询服务', '对检测过程不会操作',
+              '不容易判读检测结果', '采集尿液不方便', ' 看不懂说明书或视频', '其他'
+            ],
+
+          },
+          {
+            title: '3.你觉得HIV尿液自检主要的优点是什么？ [多选题] ',
+            name: ['操作简单', '容易获得', '保护隐私', '可以自己决定检测时间和地点',
+              '可以将来推荐给性伴使用', '其他'
+            ],
+
+          },
+          {
+            title: '4.下一次如果您想知道自己的HIV感染状况，您最想在哪里做HIV检测？',
+            name: ['家里', '同志公益小组', '疾控中心', '医院', '血站或无偿献血点', '其他地方'],
+
+          },
+          {
+            title: '5.如果HIV自检是免费的，您首选哪种自检试剂检测？',
+            name: ['指尖血检测试剂', '指尖血检测试剂 ', '口腔检测试剂']
+
+          }
+
+        ]
+      ],
+      anthor: [
+        [{
+            title: "1.您平时获取HIV检测试剂的主要途径在哪里？",
+            name: ['网店购买', '同志公益小组', '疾控中心', '药店或同志用品店', '医院',
+              '通过朋友获得', '其他途径 '
+            ],
+
+          },
+          {
+            title: "2.您认为自己是哪种性恋？",
+            name: ['同性恋', '双性恋', '对检测过程不会操作', '其他'
+
+            ],
+
+          },
+          {
+            title: '3.您寻找性伴的最主要通过哪种途径？ ',
+            name: ['网络形式', '聚会形式', '场所形式，如聊天室、酒吧、桑拿浴室等', '其他'],
+
+          },
+          {
+            title: '4.您最近一次做HIV检测的时间在什么时候？',
+            name: ['3个月内', '4-6个月', '12个月', '7-12个月', '1年以上', '从未检测过'],
+
+          },
+          {
+            title: '5.您知道自己最近一次HIV检测的结果吗？   ',
+            name: ['阴性', '阳性 ', '不知道']
+
+          },
+          {
+            title: '6.您现在是哪种性角色？',
+            name: ['纯1', '纯2', ' 0.5或介于0和1之间', '其他'],
+
+          },
+          {
+            title: '7.您在过去3个月内与同性性伴发生肛交时有没有使用安全套？（不包含MB）',
+            name: ['每次都用', '有时使用', '从未使用', ],
+
+          },
+          {
+            title: '8.您未来与同伴发生性关系后会选择HIV尿液自检试剂给自己做快检吗？',
+            name: ['会', '不会 ', '不确定']
+
+          }
+
+
+        ]
+      ],
+
+    },
+    mounted() {
+      console.log(this)
+    }
+
+
+  });
+</script>
+<style>
+  .main {
+    width: 90%;
+    margin: 20px;
+  }
+
+  .weui-cells {
+    font-size: 0.8rem !important;
+  }
+
+  .description {
+
+    color: #5b6161;
+    margin-left: 20px;
+  }
+</style>
