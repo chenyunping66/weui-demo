@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2019-12-07 15:18:51
- * @LastEditTime: 2019-12-07 16:33:07
+ * @LastEditTime: 2019-12-07 17:39:45
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-meituansd:\myCode\example\example\test.html
@@ -34,9 +34,9 @@
           <div v-for="tl in data">
             <div class="weui-cells__title weui-start">{{tl.title}}</div>
             <div class="weui-form">
-              <div class="weui-form-li iblock" v-for="na in tl.name">
-                <input class="weui-form-checkbox" name="f2" id="g6" value=" " type="radio">
-                <label for="g1">
+              <div class="weui-form-li iblock" v-for="na in tl.name"> 
+                <input class="weui-form-checkbox" name="f2" id="" value=" " type="radio">
+                <label for="">
                   <i class="weui-icon-radio"></i>
                   <div class="weui-form-text">
                     <p>{{na}}</p>
@@ -54,9 +54,9 @@
             <div v-for="tl in data">
               <div class="weui-cells__title weui-start">{{tl.title}}</div>
               <div class="weui-form">
-                <div class="weui-form-li iblock" v-for="na in tl.name">
-                  <input class="weui-form-checkbox" name="f2" id="g6" value=" " type="radio">
-                  <label for="g1">
+                <div class="weui-form-li iblock" v-for="(na.index) in tl.name">
+                  <input class="weui-form-checkbox" name="f2" id="index" value=" " type="radio">
+                  <label for="">
                     <i class="weui-icon-radio"></i>
                     <div class="weui-form-text">
                       <p>{{na}}</p>
@@ -67,15 +67,620 @@
             </div>
           </template>
         </div>
+      </div>
+    </div>
 
+
+    <div class="weui-cells__title weui-start" id="question_2_name"> 1.您在哪里使用本次HIV尿液自检包？</div>
+    <div class="weui-form">
+      <div class="weui-form-li">
+        <input class="weui-form-checkbox" name="question_2" id="question_2_1" value="家里" type="radio">
+        <label for="question_2_1">
+          <i class="weui-icon-radio"></i>
+          <div class="weui-form-text">
+            <p>家里</p>
+          </div>
+        </label>
+      </div>
+      <div class="weui-form-li">
+        <input class="weui-form-checkbox" name="question_2" id="question_2_2" value="其他地方" type="radio">
+        <label for="question_2_2">
+          <i class="weui-icon-radio"></i>
+          <div class="weui-form-text">
+            <p>其他地方</p>
+          </div>
+        </label>
+      </div>
+
+    </div>
+
+    <div class="weui-cells__title weui-start"> 2.您觉得使用HIV尿液自检包不方便的地方是什么？ <span class="f-green">[多选题]</span>
+    </div>
+    <div class="weui-form">
+
+      <div class="weui-form-li iblock">
+        <input class="weui-form-checkbox" name="f3" id="h1" value="美术" type="checkbox">
+        <label for="h1">
+          <i class="weui-icon-checkbox"></i>
+          <div class="weui-form-text">
+            <p>美术</p>
+          </div>
+        </label>
+      </div>
+
+      <div class="weui-form-li iblock">
+        <input class="weui-form-checkbox" name="f3" id="h2" value="押金价格贵" type="checkbox">
+        <label for="h2">
+          <i class="weui-icon-checkbox"></i>
+          <div class="weui-form-text">
+            <p>押金价格贵</p>
+          </div>
+        </label>
+      </div>
+      <div class="weui-form-li iblock">
+        <input class="weui-form-checkbox" name="f3" id="h3" value="检测前、后需要寻求咨询服务" type="checkbox">
+        <label for="h3">
+          <i class="weui-icon-checkbox"></i>
+          <div class="weui-form-text">
+            <p>检测前、后需要寻求咨询服务</p>
+          </div>
+        </label>
+      </div>
+      <div class="weui-form-li iblock">
+        <input class="weui-form-checkbox" name="f3" id="h4" value="对检测过程不会操作" type="checkbox">
+        <label for="h3">
+          <i class="weui-icon-checkbox"></i>
+          <div class="weui-form-text">
+            <p>对检测过程不会操作</p>
+          </div>
+        </label>
+      </div>
+      <div class="weui-form-li iblock">
+        <input class="weui-form-checkbox" name="f3" id="h5" value="不容易判读检测结果" type="checkbox">
+        <label for="h3">
+          <i class="weui-icon-checkbox"></i>
+          <div class="weui-form-text">
+            <p>不容易判读检测结果</p>
+          </div>
+        </label>
+      </div>
+      <div class="weui-form-li iblock">
+        <input class="weui-form-checkbox" name="f3" id="h6" value="采集尿液不方便" type="checkbox">
+        <label for="h6">
+          <i class="weui-icon-checkbox"></i>
+          <div class="weui-form-text">
+            <p>采集尿液不方便</p>
+          </div>
+        </label>
+      </div>
+      <div class="weui-form-li iblock">
+        <input class="weui-form-checkbox" name="f3" id="h7" value="看不懂说明书或视频" type="checkbox">
+        <label for="h3">
+          <i class="weui-icon-checkbox"></i>
+          <div class="weui-form-text">
+            <p>看不懂说明书或视频</p>
+          </div>
+        </label>
+      </div>
+      <div class="weui-form-li iblock">
+        <input class="weui-form-checkbox" name="f3" id="h8" value="其他" type="checkbox">
+        <label for="h3">
+          <i class="weui-icon-checkbox"></i>
+          <div class="weui-form-text">
+            <p>其他</p>
+          </div>
+        </label>
       </div>
 
     </div>
 
 
+    <div class="weui-cells__title weui-start"> 3.你觉得HIV尿液自检主要的优点是什么？<span class="f-green">[多选题]</span>
+    </div>
+    <div class="weui-form">
+
+      <div class="weui-form-li iblock">
+        <input class="weui-form-checkbox" name="f3" id="h9" value="操作简单" type="checkbox">
+        <label for="h1">
+          <i class="weui-icon-checkbox"></i>
+          <div class="weui-form-text">
+            <p>操作简单</p>
+          </div>
+        </label>
+      </div>
+
+      <div class="weui-form-li iblock">
+        <input class="weui-form-checkbox" name="f3" id="h10" value="容易获得" type="checkbox">
+        <label for="h2">
+          <i class="weui-icon-checkbox"></i>
+          <div class="weui-form-text">
+            <p>容易获得</p>
+          </div>
+        </label>
+      </div>
+      <div class="weui-form-li iblock">
+        <input class="weui-form-checkbox" name="f3" id="h11" value="保护隐私" type="checkbox">
+        <label for="h3">
+          <i class="weui-icon-checkbox"></i>
+          <div class="weui-form-text">
+            <p>保护隐私</p>
+          </div>
+        </label>
+      </div>
+      <div class="weui-form-li iblock">
+        <input class="weui-form-checkbox" name="f3" id="h12" value="可以自己决定检测时间和地点" type="checkbox">
+        <label for="h3">
+          <i class="weui-icon-checkbox"></i>
+          <div class="weui-form-text">
+            <p>可以自己决定检测时间和地点</p>
+          </div>
+        </label>
+      </div>
+      <div class="weui-form-li iblock">
+        <input class="weui-form-checkbox" name="f3" id="h13" value="可以将来推荐给性伴使用" type="checkbox">
+        <label for="h3">
+          <i class="weui-icon-checkbox"></i>
+          <div class="weui-form-text">
+            <p>可以将来推荐给性伴使用</p>
+          </div>
+        </label>
+      </div>
+      <div class="weui-form-li iblock">
+        <input class="weui-form-checkbox" name="f3" id="h14" value="其他" type="checkbox">
+        <label for="h6">
+          <i class="weui-icon-checkbox"></i>
+          <div class="weui-form-text">
+            <p>其他</p>
+          </div>
+        </label>
+      </div>
+
+    </div>
+
+
+
+    <div class="weui-cells__title weui-start" id="question_3_name"> 4.下一次如果您想知道自己的HIV感染状况，您最想在哪里做HIV检测？</div>
+    <div class="weui-form">
+      <div class="weui-form-li">
+        <input class="weui-form-checkbox" name="question_3" id="question_3_1" value="家里" type="radio">
+        <label for="question_3_1">
+          <i class="weui-icon-radio"></i>
+          <div class="weui-form-text">
+            <p>家里</p>
+          </div>
+        </label>
+      </div>
+      <div class="weui-form-li">
+        <input class="weui-form-checkbox" name="question_3" id="question_3_2" value="同志公益小组" type="radio">
+        <label for="question_3_2">
+          <i class="weui-icon-radio"></i>
+          <div class="weui-form-text">
+            <p>同志公益小组</p>
+          </div>
+        </label>
+      </div>
+      <div class="weui-form-li">
+        <input class="weui-form-checkbox" name="question_3" id="question_3_3" value="疾控中心" type="radio">
+        <label for="question_3_3">
+          <i class="weui-icon-radio"></i>
+          <div class="weui-form-text">
+            <p>疾控中心</p>
+          </div>
+        </label>
+      </div>
+      <div class="weui-form-li">
+        <input class="weui-form-checkbox" name="question_3" id="question_3_4" value="医院" type="radio">
+        <label for="question_3_4">
+          <i class="weui-icon-radio"></i>
+          <div class="weui-form-text">
+            <p>医院</p>
+          </div>
+        </label>
+      </div>
+      <div class="weui-form-li">
+        <input class="weui-form-checkbox" name="question_3" id="question_3_5" value="血站或无偿献血点" type="radio">
+        <label for="question_3_5">
+          <i class="weui-icon-radio"></i>
+          <div class="weui-form-text">
+            <p>血站或无偿献血点</p>
+          </div>
+        </label>
+      </div>
+      <div class="weui-form-li">
+        <input class="weui-form-checkbox" name="question_3" id="question_3_6" value="其他地方 " type="radio">
+        <label for="question_3_6">
+          <i class="weui-icon-radio"></i>
+          <div class="weui-form-text">
+            <p>其他地方 </p>
+          </div>
+        </label>
+      </div>
+    </div>
+
+    <div class="weui-cells__title weui-start" id="question_4_name"> 5.如果HIV自检是免费的，您首选哪种自检试剂检测？</div>
+    <div class="weui-form">
+      <div class="weui-form-li">
+        <input class="weui-form-checkbox" name="question_4" id="question_4_1" value="指尖血检测试剂 " type="radio">
+        <label for="question_4_1">
+          <i class="weui-icon-radio"></i>
+          <div class="weui-form-text">
+            <p>
+              指尖血检测试剂 </p>
+          </div>
+        </label> </div>
+      <div class="weui-form-li">
+        <input class="weui-form-checkbox" name="question_4" id="question_4_2" value="尿液检测试剂 " type="radio">
+        <label for="question_4_2">
+          <i class="weui-icon-radio"></i>
+          <div class="weui-form-text">
+            <p>尿液检测试剂 </p>
+          </div>
+        </label>
+      </div>
+      <div class="weui-form-li">
+        <input class="weui-form-checkbox" name="question_4" id="question_4_3" value="口腔检测试剂" type="radio">
+        <label for="question_4_3">
+          <i class="weui-icon-radio"></i>
+          <div class="weui-form-text">
+            <p>口腔检测试剂</p>
+          </div>
+        </label>
+      </div>
+
+    </div>
+
+    <div class=" description" style="margin-top: 20px;">二、其他情况</div>
+    <div class="weui-cells weui-cells_form">
+
+      <div class="weui-cells__title weui-start" id="question_5_name"> 1.您平时获取HIV检测试剂的主要途径在哪里？</div>
+      <div class="weui-form">
+        <div class="weui-form-li">
+          <input class="weui-form-checkbox" name="question_5" id="question_5_1" value="网店购买" type="radio">
+          <label for="question_5_1">
+            <i class="weui-icon-radio"></i>
+            <div class="weui-form-text">
+              <p>网店购买</p>
+            </div>
+          </label>
+        </div>
+        <div class="weui-form-li">
+          <input class="weui-form-checkbox" name="question_5" id="question_5_2" value="同志公益小组" type="radio">
+          <label for="question_5_2">
+            <i class="weui-icon-radio"></i>
+            <div class="weui-form-text">
+              <p>同志公益小组</p>
+            </div>
+          </label>
+        </div>
+        <div class="weui-form-li">
+          <input class="weui-form-checkbox" name="question_5" id="question_5_3" value="疾控中心" type="radio">
+          <label for="question_5_3">
+            <i class="weui-icon-radio"></i>
+            <div class="weui-form-text">
+              <p>疾控中心</p>
+            </div>
+          </label>
+        </div>
+        <div class="weui-form-li">
+          <input class="weui-form-checkbox" name="question_5" id="question_5_4" value="药店或同志用品店" type="radio">
+          <label for="question_5_4">
+            <i class="weui-icon-radio"></i>
+            <div class="weui-form-text">
+              <p>药店或同志用品店</p>
+            </div>
+          </label>
+        </div>
+        <div class="weui-form-li">
+          <input class="weui-form-checkbox" name="question_5" id="question_54" value="药店或同志用品店" type="radio">
+          <label for="question_5_4">
+            <i class="weui-icon-radio"></i>
+            <div class="weui-form-text">
+              <p>药店或同志用品店</p>
+            </div>
+          </label>
+        </div>
+        <div class="weui-form-li">
+          <input class="weui-form-checkbox" name="question_5" id="question_4" value="医院" type="radio">
+          <label for="question_5_4">
+            <i class="weui-icon-radio"></i>
+            <div class="weui-form-text">
+              <p>医院</p>
+            </div>
+          </label>
+        </div>
+        <div class="weui-form-li">
+          <input class="weui-form-checkbox" name="question_5" id="question_o4" value="通过朋友获得" type="radio">
+          <label for="question_5_4">
+            <i class="weui-icon-radio"></i>
+            <div class="weui-form-text">
+              <p>通过朋友获得</p>
+            </div>
+          </label>
+        </div>
+        <div class="weui-form-li">
+          <input class="weui-form-checkbox" name="question_5" id="question_o48" value="其他途径" type="radio">
+          <label for="question_5_4">
+            <i class="weui-icon-radio"></i>
+            <div class="weui-form-text">
+              <p>其他途径</p>
+            </div>
+          </label>
+        </div>
+      </div>
+
+      <div class="weui-cells__title weui-start" id="question_6_name">2.您认为自己是哪种性恋？</div>
+      <div class="weui-form">
+        <div class="weui-form-li">
+          <input class="weui-form-checkbox" name="question_6" id="question_6_1" value="同性恋" type="radio">
+          <label for="question_6_1">
+            <i class="weui-icon-radio"></i>
+            <div class="weui-form-text">
+              <p>同性恋</p>
+            </div>
+          </label>
+        </div>
+        <div class="weui-form-li">
+          <input class="weui-form-checkbox" name="question_6" id="question_6_2" value="双性恋" type="radio">
+          <label for="question_6_2">
+            <i class="weui-icon-radio"></i>
+            <div class="weui-form-text">
+              <p>双性恋</p>
+            </div>
+          </label>
+        </div>
+        <div class="weui-form-li">
+          <input class="weui-form-checkbox" name="question_6" id="question_6o2" value="其他" type="radio">
+          <label for="question_6_2">
+            <i class="weui-icon-radio"></i>
+            <div class="weui-form-text">
+              <p>其他</p>
+            </div>
+          </label>
+        </div>
+      </div>
+
+      <div class="weui-cells__title weui-start" id="question_7_name">3.您寻找性伴的最主要通过哪种途径？</div>
+      <div class="weui-form">
+        <div class="weui-form-li">
+          <input class="weui-form-checkbox" name="question_7" id="question_7_1" value="网络形式" type="radio">
+          <label for="question_7_1">
+            <i class="weui-icon-radio"></i>
+            <div class="weui-form-text">
+              <p>网络形式</p>
+            </div>
+          </label>
+        </div>
+        <div class="weui-form-li">
+          <input class="weui-form-checkbox" name="question_7" id="question_7_2" value="聚会形式" type="radio">
+          <label for="question_7_2">
+            <i class="weui-icon-radio"></i>
+            <div class="weui-form-text">
+              <p>聚会形式</p>
+            </div>
+          </label>
+        </div>
+        <div class="weui-form-li">
+          <input class="weui-form-checkbox" name="question_7" id="question_7_3" value="场所形式，如聊天室、酒吧、桑拿浴室等" type="radio">
+          <label for="question_7_3">
+            <i class="weui-icon-radio"></i>
+            <div class="weui-form-text">
+              <p>场所形式，如聊天室、酒吧、桑拿浴室等</p>
+            </div>
+          </label>
+        </div>
+        <div class="weui-form-li">
+          <input class="weui-form-checkbox" name="question_7" id="question_7_4" value="其他" type="radio">
+          <label for="question_7_4">
+            <i class="weui-icon-radio"></i>
+            <div class="weui-form-text">
+              <p>其他</p>
+            </div>
+          </label>
+        </div>
+      </div>
+
+      <div class="weui-cells__title weui-start" id="question_8_name"> 4.您最近一次做HIV检测的时间在什么时候？</div>
+      <div class="weui-form">
+        <div class="weui-form-li">
+          <input class="weui-form-checkbox" name="question_8" id="question_8_1" value="宣传海报" type="radio">
+          <label for="question_8_1">
+            <i class="weui-icon-radio"></i>
+            <div class="weui-form-text">
+              <p>3个月内</p>
+            </div>
+          </label>
+        </div>
+        <div class="weui-form-li">
+          <input class="weui-form-checkbox" name="question_8" id="question_8_2" value="4-6个月" type="radio">
+          <label for="question_8_2">
+            <i class="weui-icon-radio"></i>
+            <div class="weui-form-text">
+              <p>4-6个月</p>
+            </div>
+          </label>
+        </div>
+        <div class="weui-form-li">
+          <input class="weui-form-checkbox" name="question_8" id="question_8_3" value="7-12个月" type="radio">
+          <label for="question_8_3">
+            <i class="weui-icon-radio"></i>
+            <div class="weui-form-text">
+              <p>7-12个月</p>
+            </div>
+          </label>
+        </div>
+        <div class="weui-form-li">
+          <input class="weui-form-checkbox" name="question_8" id="question_8_4" value="1年以上" type="radio">
+          <label for="question_8_4">
+            <i class="weui-icon-radio"></i>
+            <div class="weui-form-text">
+              <p>1年以上</p>
+            </div>
+          </label>
+        </div>
+        <div class="weui-form-li">
+          <input class="weui-form-checkbox" name="question_8" id="question_8_5" value="从未检测过" type="radio">
+          <label for="question_8_5">
+            <i class="weui-icon-radio"></i>
+            <div class="weui-form-text">
+              <p>从未检测过</p>
+            </div>
+          </label>
+        </div>
+
+      </div>
+
+      <div class="weui-cells__title weui-start" id="question_9_name"> 5.您知道自己最近一次HIV检测的结果吗？ </div>
+      <div class="weui-form">
+        <div class="weui-form-li">
+          <input class="weui-form-checkbox" name="question_9" id="question_9_1" value="是" type="radio">
+          <label for="question_9_1">
+            <i class="weui-icon-radio"></i>
+            <div class="weui-form-text">
+              <p>阴性</p>
+            </div>
+          </label>
+        </div>
+        <div class="weui-form-li">
+          <input class="weui-form-checkbox" name="question_9" id="question_9_2" value="阳性" type="radio">
+          <label for="question_9_2">
+            <i class="weui-icon-radio"></i>
+            <div class="weui-form-text">
+              <p>阳性</p>
+            </div>
+          </label>
+        </div>
+        <div class="weui-form-li">
+          <input class="weui-form-checkbox" name="question_9" id="question_9_3" value="不知道" type="radio">
+          <label for="question_9_3">
+            <i class="weui-icon-radio"></i>
+            <div class="weui-form-text">
+              <p>不知道</p>
+            </div>
+          </label>
+        </div>
+      </div>
+
+      <div class="weui-cells__title weui-start" id="question_10_name"> 6.您现在是哪种性角色？</div>
+      <div class="weui-form">
+        <div class="weui-form-li">
+          <input class="weui-form-checkbox" name="question_10" id="question_10_1" value="纯1" type="radio">
+          <label for="question_10_1">
+            <i class="weui-icon-radio"></i>
+            <div class="weui-form-text">
+              <p>纯1</p>
+            </div>
+          </label>
+        </div>
+        <div class="weui-form-li">
+          <input class="weui-form-checkbox" name="question_10" id="question_10_2" value="纯0" type="radio">
+          <label for="question_10_2">
+            <i class="weui-icon-radio"></i>
+            <div class="weui-form-text">
+              <p>纯0</p>
+            </div>
+          </label>
+        </div>
+        <div class="weui-form-li">
+          <input class="weui-form-checkbox" name="question_10" id="question_1_2" value="纯0" type="radio">
+          <label for="question_10_2">
+            <i class="weui-icon-radio"></i>
+            <div class="weui-form-text">
+              <p>纯0</p>
+            </div>
+          </label>
+        </div>
+        <div class="weui-form-li">
+          <input class="weui-form-checkbox" name="question_10" id="question_10l_2" value=" 0.5或介于0和1之间" type="radio">
+          <label for="question_10_2">
+            <i class="weui-icon-radio"></i>
+            <div class="weui-form-text">
+              <p> 0.5或介于0和1之间</p>
+            </div>
+          </label>
+        </div>
+        <div class="weui-form-li">
+          <input class="weui-form-checkbox" name="question_10" id="question__2" value=" 其他" type="radio">
+          <label for="question_10_2">
+            <i class="weui-icon-radio"></i>
+            <div class="weui-form-text">
+              <p> 其他</p>
+            </div>
+          </label>
+        </div>
+      </div>
+
+
+      <div class="weui-cells__title weui-start" id="question_1_name"> 7.您在过去3个月内与同性性伴发生肛交时有没有使用安全套？（不包含MB）</div>
+      <div class="weui-form">
+        <div class="weui-form-li">
+          <input class="weui-form-checkbox" name="question_10" id="question_11" value=" 每次都用" type="radio">
+          <label for="question_10_1">
+            <i class="weui-icon-radio"></i>
+            <div class="weui-form-text">
+              <p> 每次都用</p>
+            </div>
+          </label>
+        </div>
+        <div class="weui-form-li">
+          <input class="weui-form-checkbox" name="question_10" id="question_12" value="有时使用" type="radio">
+          <label for="question_10_2">
+            <i class="weui-icon-radio"></i>
+            <div class="weui-form-text">
+              <p>有时使用</p>
+            </div>
+          </label>
+        </div>
+        <div class="weui-form-li">
+          <input class="weui-form-checkbox" name="question_10" id="question_2" value="从未使用" type="radio">
+          <label for="question_10_2">
+            <i class="weui-icon-radio"></i>
+            <div class="weui-form-text">
+              <p>从未使用</p>
+            </div>
+          </label>
+        </div>
+      </div>
+
+      <div class="weui-cells__title weui-start" id="question8_1_name">8.您未来与同伴发生性关系后会选择HIV尿液自检试剂给自己做快检吗？</div>
+      <div class="weui-form">
+        <div class="weui-form-li">
+          <input class="weui-form-checkbox" name="question_10" id="question_191" value=" 会" type="radio">
+          <label for="question_10_1">
+            <i class="weui-icon-radio"></i>
+            <div class="weui-form-text">
+              <p> 会</p>
+            </div>
+          </label>
+        </div>
+        <div class="weui-form-li">
+          <input class="weui-form-checkbox" name="question_190" id="question_1092" value="不会" type="radio">
+          <label for="question_10_2">
+            <i class="weui-icon-radio"></i>
+            <div class="weui-form-text">
+              <p>不会</p>
+            </div>
+          </label>
+        </div>
+        <div class="weui-form-li">
+          <input class="weui-form-checkbox" name="question_10" id="question_29" value="不确定" type="radio">
+          <label for="question_10_2">
+            <i class="weui-icon-radio"></i>
+            <div class="weui-form-text">
+              <p>不确定</p>
+            </div>
+          </label>
+        </div>
+      </div>
+    </div>
+
+
+
     <div class="weui-btn-area">
       <a class="weui-btn weui-btn_primary" href="./list.html" id="showTooltips">上传</a>
     </div>
+  </div>
+  </div>
+
   </div>
 </body>
 
