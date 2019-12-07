@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="list-body">
+    <div class="file">
+      <!-- <div style="padding-left:20px"> -->
+      <div class="title"><span class="mg">文件上传</span></div>
+      <div class="cont">
+        <p>请按必备工具中的说明拍摄，并上传两张不同角度的照片，请在明亮的光线下拍摄</p>
+        <span class="photo">图像1：</span><input type="file"><br>
+        <span class="photo">图像2：</span><input type="file">
+      </div>
+    </div>
+
+    <div class="file inpt">
+      <div class="title"><span class="mg">表单</span></div>
+      <div class="cont">
+        <!-- 输入框 -->
+        <!-- 警告样式的输入框 -->
+        <div class="weui-cells weui-cells_form">
+
+          <div class="weui-cell weui-cell_warn">
+            <div class="weui-cell__hd div-inline">
+              <label for="" class="weui-label ">编号</label>
+            </div>
+            <div class="weui-cell__bd div-inline">
+              <input class="weui-input" type="number" placeholder="请输入卡号">
+            </div>
+            <div class="weui-cell__ft div-inline">
+              <i class="weui-icon-warn"></i>
+            </div>
+          </div>
+
+          <div class="weui-cell">
+            <div class="weui-cell__hd div-inline"><label for="" class="weui-label">时间</label></div>
+            <div class="weui-cell__bd div-inline">
+              <input class="weui-input" type="datetime-local" value="" placeholder="" />
+            </div>
+          </div>
+
+          <!-- 输入框 -->
+          <div class="weui-cells weui-cells_form">
+            <div class="weui-cell">
+              <div class="weui-cell__hd div-inline"><label class="weui-label">状态</label></div>
+              <div class="weui-cell__bd div-inline">
+                <input class="weui-input" type="text" placeholder="状态">
+              </div>
+            </div>
+          </div>
+
+          <!-- 输入框 -->
+          <div class="weui-cells weui-cells_form">
+            <div class="weui-cell">
+              <div class="weui-cell__hd div-inline"><label class="weui-label">操作</label></div>
+              <div class="weui-cell__bd div-inline">
+                <input class="weui-input" type="text" placeholder="操作">
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
+<style>
+  .list-body {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+  }
+
+  .file {
+    width: 90%;
+    height: 260px;
+    margin: 0 auto;
+    border: 1px solid green;
+  }
+
+  .inpt {
+    margin-top: 10px;
+  }
+
+  .file .title {
+    width: 100%;
+    height: 40px;
+    /* border: 1px solid red; */
+    line-height: 40px;
+    /* margin-left: 20px; */
+    background: goldenrod;
+  }
+
+  .file p {
+    font-size: 0.1rem;
+  }
+
+  .photo {
+    font-size: 0.8rem
+  }
+
+  .mg {
+    margin-left: 20px
+  }
+
+  .cont {
+    padding-left: 10px
+  }
+
+  .div-inline {
+    display: inline
+  }
+
+  .weui-cell {
+    margin-top: 10px;
+  }
+</style>
