@@ -12,6 +12,17 @@
 
 <body>
   <div class="main">
+
+    <!---------------顶部导航--------------->
+    <!-- <div class="weui-tab">
+      <div class="weui-navbar">
+        头部导航
+       
+      </div>
+      <div class="weui-tab__panel">
+      </div>
+    </div> -->
+
     <div class="main-top">
       <!-- eee
 
@@ -19,14 +30,17 @@
       <i class="weui_icon_msg weui_icon_success"></i> -->
       <div class="weui-flex">
         <div class="weui-flex__item">
+          <img src="./images/icon_jl.svg" style="width: 30px;">
           <h3>填表不用实名</h3>
           请按检测者的真实情况填写。你还可以具体了解我们怎样保护你的隐私。
         </div>
         <div class="weui-flex__item">
+          <img src="./images/icon_rzcg.svg">
           <h3>原路返还补贴</h3>
           补贴申请成功后，补贴只返还到订购者的微信钱包，订购时请看清楚。
         </div>
         <div class="weui-flex__item">
+          <img src="./images/icon_rsgl.svg">
           <h3>24小时相应</h3>
           提交申请后24小时内有专人判读结果并完成退款 (没有在淘宝收货的，需要先完成收货操作)。
         </div>
@@ -47,6 +61,29 @@
 
     </div>
 
+
+    <div class="weui-tabbar">
+      <a href="" class="weui-tabbar__item">
+        <img src="./images/icon_tabbar.png" alt="" class="weui-tabbar__icon">
+        <p class="weui-tabbar__label">Home</p>
+      </a>
+      <a href="" class="weui-tabbar__item">
+        <span style="position:relative;display:inline-block">
+          <img src="./images/icon_tabbar.png" alt="" class="weui-tabbar__icon">
+          <!-- weui-badge表示一个红色的展示区 -->
+          <span class="weui-badge" style="position:absolute;top:-6;right:-11px">8</span>
+        </span>
+        <p class="weui-tabbar__label">Demos</p>
+      </a>
+      <a href="" class="weui-tabbar__item">
+        <span style="position:relative;display:inline-block">
+          <img src="./images/icon_tabbar.png" alt="" class="weui-tabbar__icon">
+          <!-- weui-badge_dot小圆点，给一个相对于span的定位，放在右上角 -->
+          <span class="weui-badge weui-badge_dot" style="position:absolute;top:0;right:-6px"></span>
+        </span>
+        <p class="weui-tabbar__label">Donate</p>
+      </a>
+    </div>
   </div>
 </body>
 
@@ -62,6 +99,7 @@
     border: 1px solid rgb(211, 207, 207);
     width: 100%;
     /* height: 200px; */
+    padding-top: 30px;
     margin-bottom: 20px;
   }
 
@@ -90,6 +128,16 @@
     justify-content: center;
     align-items: center;
     display: flex;
+  }
+
+
+  /* /底部 */
+  .weui-tabbar {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #f1edee;
   }
 </style>
 <script type="text/javascript">
